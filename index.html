@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    button {
+      background-color: #4A55A2;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      font-weight: 600;
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      transition: 0.5s;
+    }
+
+    button:hover {
+      background-color: #414a8d;
+    }
+  </style>
+</head>
+<!--
+
+  Esses styles estão porcos, 
+  mas o importante é ficar bonito e funcional
+
+-->
+<body style="display: flex; 
+flex-direction: column; 
+color: white; 
+align-items: center; 
+justify-content: center; 
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+background-image: linear-gradient(#6528F7, #A076F9, #D7BBF5, #EDE4FF);
+background-repeat: no-repeat; height: 800px;
+">
+  <div style="background-image: linear-gradient(#4A55A2, #7895CB, #A0BFE0, #C5DFF8); 
+  width: 120px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding-bottom: 10px; 
+  border-radius: 10px; 
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);">
+    <h3 style="
+      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+      ">Calculator</h3>
+    <div style="display: flex; 
+    gap: 5px; 
+    margin-bottom: 10px;">
+      <button onclick="
+      calculation += '1'
+      console.log(calculation);
+      ">1</button>
+      <button onclick="
+        calculation += '2';
+        console.log(calculation);
+      ">2</button>
+      <button onclick="
+        calculation += '3';
+        console.log(calculation);
+      ">3</button>
+      <button onclick="
+        calculation += ' + '
+        console.log(calculation);
+      ">+</button>
+    </div>
+    <div style="display: flex; 
+    gap: 5px; 
+    margin-bottom: 10px;">
+      <button onclick="
+      calculation += '4'
+      console.log(calculation);
+      ">4</button>
+      <button onclick="
+        calculation += '5';
+        console.log(calculation);
+      ">5</button>
+      <button onclick="
+        calculation += '6';
+        console.log(calculation);
+      ">6</button>
+      <button onclick="
+        calculation += ' - '
+        console.log(calculation);
+      ">-</button>
+    </div>
+
+    <div style="display: flex; 
+    gap: 5px; 
+    margin-bottom: 10px;">
+      <button onclick="
+      calculation += '7'
+      console.log(calculation);
+      ">7</button>
+      <button onclick="
+        calculation += '8';
+        console.log(calculation);
+      ">8</button>
+      <button onclick="
+        calculation += '9';
+        console.log(calculation);
+      ">9</button>
+      <button onclick="
+        calculation += ' * '
+        console.log(calculation);
+      ">*</button>
+    </div>
+
+    <div style="display: flex; 
+    gap: 5px; 
+    margin-bottom: 10px;">
+      <button onclick="
+        calculation += '0';
+        console.log(calculation);
+      ">0</button>
+      <button onclick="
+        calculation += '.';
+        console.log(calculation);
+      ">.</button>
+      <button onclick="
+        eval(calculation);
+        calculation = eval(calculation);
+        console.log(calculation);
+      ">=</button>
+      <button onclick="
+        calculation += ' / '
+        console.log(calculation);
+      ">/</button>
+    </div>
+
+    <div style="display: flex; align-items: center;">
+    <button onclick="
+      calculation = '';
+      console.log(`Cleared.`);
+    ">Clear</button>
+
+    <div style="position: relative; display: flex;">
+    <button style="height: 17.24px; text-align: center;" title="only for big numbers" onclick="
+      calculation = Math.round(calculation);
+      console.log(calculation);
+    ">Round</button>
+    <div style="position: absolute;
+    top: 18px;
+    right: -55px;
+    font-size: 10px;
+    width: 94.5px;
+    color: black;
+    ">^^^<br> Only for big numbers</div>
+    </div>
+    </div>
+  </div>
+  
+  <script>
+    let calculation = ''
+  </script>
+</body>
+</html>
